@@ -7,9 +7,9 @@
 <main class="container">
     <h1>Création d'un nouveau produit</h1>
     <form method="post">
-        <?= $formUtility->generateHTML('Nom du produit'); ?>
-        <?= $formUtility->generateHTML('Price du produit'); ?>
-        <?= $formUtility->generateHTML('Description'); ?>
+        <?= $formUtility->generateHTML('Nom du produit', 'text', 'name', 'Saisir le nom'); ?>
+        <?= $formUtility->generateHTML('Price du produit', 'number', 'price'); ?>
+        <?= $formUtility->generateHTML('Description', 'textarea', 'description'); ?>
 
         <button type="submit" class="btn btn-primary">Créer le produit</button>
     </form>
