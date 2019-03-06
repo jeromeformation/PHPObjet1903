@@ -1,12 +1,21 @@
 <?php
 
+/**
+ * Class VoitureDiesel
+ * Le voiture diesel "pollue", elle aura donc une propriété "pollution" ...
+ * ... qui augmentera à chaque kilomètre
+ */
 class VoitureDiesel extends Voiture
 {
     /**
-     * @var int
+     * @var int Représente la pollution de la voiture
      */
-    private $pollution;
+    private $pollution = 0;
 
+    /**
+     * Surcharge : la pollution augmente quand on roule
+     * @param int $kilometres
+     */
     public function rouler(int $kilometres): void
     {
         echo '<p>J\'avance de '. $kilometres. 'km</p>';

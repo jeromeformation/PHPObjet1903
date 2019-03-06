@@ -19,9 +19,24 @@ require 'header.php'
         $voitureNormal->rouler(10);
         $voitureNormal->rouler(10);
 
-        echo '<h2>Voiture diesel</h2>';
-        $voitureDiesel1->rouler(10);
-        $voitureDiesel1->rouler(10);
+    echo '<h2>Voiture diesel</h2>';
+    $voitureDiesel1->rouler(10);
+    $voitureDiesel1->rouler(10);
+
+    echo '<h2>Voiture électrique</h2>';
+    $zoe->rouler(50);
+    $zoe->rouler(70); // Plus d'énergie
+    $zoe->recharger();
+    $zoe->rouler(150); // Plus d'énergie
+    $zoe->recharger();
+    $zoe->rouler(30); // Plus d'énergie
+
+    //$zoe->recharger(-1000);
+    //var_dump($zoe);
+    $zoe->recharger(1000);
+    var_dump($zoe);
+
+
     ?>
 
 </main>

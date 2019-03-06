@@ -16,10 +16,15 @@ class Voiture
     protected $moteur;
 
     /**
-     * @var int
+     * @var int Kilométrage de la voiture - Au départ à 0 - Augmente au fur et à mesure que la voiture roule
      */
     protected $km;
 
+    /**
+     * Il initialise le kilométrage à zéro
+     * @param string $premiereMarque
+     * @param string $premierMoteur
+     */
     public function __construct(string $premiereMarque, string $premierMoteur)
     {
         var_dump('Appel du constructeur');
@@ -28,11 +33,18 @@ class Voiture
         $this->km = 0;
     }
 
+    /**
+     * Exemple d'une fonction qu'on peut utiliser dans les Classes Filles sans la redéfinir
+     */
     public function demarrer(): void
     {
-        echo '===== Démarrage =====';
+        echo '<p>===== Démarrage =====</p>';
     }
 
+    /**
+     * Fait avancer la voiture - Le kilométrage augmente
+     * @param int $kilometres
+     */
     public function rouler(int $kilometres): void
     {
         echo '<p>J\'avance de '. $kilometres. 'km</p>';
