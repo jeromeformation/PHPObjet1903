@@ -47,9 +47,8 @@ class Voiture
      */
     public function rouler(int $kilometres): void
     {
-        echo '<p>J\'avance de '. $kilometres. 'km</p>';
         $this->km = $this->km + $kilometres;
-        echo '<p>Kilométrage = '. $this->km .'</p>';
+        echo '<p>J\'avance de '. $kilometres. 'km (kilométrage = '. $this->km .')</p>';
     }
 
     /**

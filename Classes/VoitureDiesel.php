@@ -10,7 +10,21 @@ class VoitureDiesel extends Voiture
     /**
      * @var int Représente la pollution de la voiture
      */
-    private $pollution = 0;
+    private $pollution;
+
+    /**
+     * Surcharge : il initialise la pollution à 0
+     * @param string $premiereMarque
+     * @param string $premierMoteur
+     */
+    public function __construct(string $premiereMarque, string $premierMoteur)
+    {
+        // On pense bien à appeler le constructeur parent
+        parent::__construct($premiereMarque, $premierMoteur);
+        // On initialise la pollution
+        $this->pollution = 0;
+    }
+
 
     /**
      * Surcharge : la pollution augmente quand on roule
@@ -18,10 +32,9 @@ class VoitureDiesel extends Voiture
      */
     public function rouler(int $kilometres): void
     {
-        echo '<p>J\'avance de '. $kilometres. 'km</p>';
         $this->km = $this->km + $kilometres;
         $this->pollution = $this->pollution + $kilometres;
-        echo '<p>Kilométrage = '. $this->km .', pollution : '. $this->pollution .'</p>';
+        echo '<p>J\'avance de '. $kilometres. 'km (kilométrage = '. $this->km .'), pollution : '. $this->pollution .'</p>';
     }
 
     /**

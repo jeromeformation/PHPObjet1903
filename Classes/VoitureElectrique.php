@@ -18,11 +18,9 @@ class VoitureElectrique extends Voiture
      */
     public function __construct(string $premiereMarque, string $premierMoteur)
     {
-        var_dump('Appel du constructeur');
-        $this->marque = $premiereMarque;
-        $this->moteur = $premierMoteur;
-        $this->km = 0;
-
+        // On pense bien à appeler le constructeur parent
+        parent::__construct($premiereMarque, $premierMoteur);
+        // On initialise l'énergie
         $this->energie = 100;
     }
 
