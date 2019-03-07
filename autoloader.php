@@ -6,6 +6,6 @@
 // utilisera une classe se trouvant dans le dossier "Classes"
 
 function autoloader_perso($className) {
-    require_once('Classes/' . $className . '.php');
+    require_once($className . '.php');
 }
 spl_autoload_register('autoloader_perso');

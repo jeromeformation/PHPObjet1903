@@ -1,5 +1,5 @@
 <?php
-
+namespace Classes;
 require('autoloader.php');
 
 echo 'Bonjour';

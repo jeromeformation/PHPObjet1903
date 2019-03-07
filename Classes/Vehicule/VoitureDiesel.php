@@ -1,4 +1,5 @@
 <?php
+namespace Classes\Vehicule;
 
 /**
  * Class VoitureDiesel
@@ -29,10 +30,13 @@ class VoitureDiesel extends Voiture
     /**
      * Surcharge : la pollution augmente quand on roule
      * @param int $kilometres
+     * @throws \Exception
      */
     public function rouler(int $kilometres): void
     {
-        $this->km = $this->km + $kilometres;
+        // On rappelle la méthode parent
+        parent::rouler($kilometres);
+
         $this->pollution = $this->pollution + $kilometres;
         echo '<p>J\'avance de '. $kilometres. 'km (kilométrage = '. $this->km .'), pollution : '. $this->pollution .'</p>';
     }

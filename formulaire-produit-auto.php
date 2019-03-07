@@ -1,6 +1,7 @@
 <?php
+    namespace Classes\Formulaire;
     require('autoloader.php');
-    $formUtility = new FormUtility();
+    $formUtility = new formUtility();
 ?>
 <?php include 'header.php'; ?>
 

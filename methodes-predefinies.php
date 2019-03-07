@@ -1,5 +1,7 @@
 <?php
 
+use Classes\Vehicule\Voiture;
+
 require 'autoloader.php';
 
 $voiture = new Voiture('Renault', 'essence');

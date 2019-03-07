@@ -1,4 +1,5 @@
 <?php
+namespace Classes\Formulaire;
 
 abstract class FormBuilder
 {

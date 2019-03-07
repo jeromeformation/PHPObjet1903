@@ -1,4 +1,5 @@
 <?php
+namespace Classes\Formulaire;
 
 class FormBuilderProduct extends FormBuilder
 {
@@ -7,6 +8,6 @@ class FormBuilderProduct extends FormBuilder
     {
         return [
             'name'
-        ]
+        ];
     }
 }

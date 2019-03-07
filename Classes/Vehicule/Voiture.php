@@ -1,4 +1,7 @@
 <?php
+namespace Classes\Vehicule;
+
+use Classes\Exceptions\BadParamException;
 
 /**
  * Class Voiture : classe représentant une voiture
@@ -44,11 +47,16 @@ class Voiture
     /**
      * Fait avancer la voiture - Le kilométrage augmente
      * @param int $kilometres
+     * @throws BadParamException- Déclenchement si $kilometres < 0
      */
     public function rouler(int $kilometres): void
     {
+        // Tester si les kilomètres sont positif
+        if ($kilometres < 0) {
+           throw new BadParamException('kilometres', 'Plus petit que zéro');
+        }
+
         $this->km = $this->km + $kilometres;
-        echo '<p>J\'avance de '. $kilometres. 'km (kilométrage = '. $this->km .')</p>';
     }
 
     /**

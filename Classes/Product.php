@@ -1,4 +1,5 @@
 <?php
+namespace Classes;
 
 class Product {
     const DEFAULT_NB_VIEWS = 0;

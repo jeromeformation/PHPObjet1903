@@ -1,4 +1,5 @@
 <?php
+namespace Classes\Gateau;
 
 class GateauGroupe extends Gateau
 {

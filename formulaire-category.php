@@ -1,8 +1,11 @@
 <?php
-include 'header.php';
+namespace Classes\Formulaire;
+
 require 'autoloader.php';
-$formUtility = new FormUtility();
-?>
+include 'header.php';
+$formUtility = new formUtility();
+
+ ?>
 
 <main class="container">
     <h1>Formulaire de la catégorie</h1>

@@ -1,4 +1,5 @@
 <?php
+namespace Classes;
 
 class User {
     private $email;

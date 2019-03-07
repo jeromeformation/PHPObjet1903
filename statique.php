@@ -1,5 +1,5 @@
 <?php
-
+namespace Classes\Gateau;
 require 'autoloader.php';
 /*
 // Fabriquer des gateaux, compter le nombre de gateaux mangés

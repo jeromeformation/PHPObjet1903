@@ -1,4 +1,5 @@
 <?php
+namespace Classes\Vehicule;
 
 /**
  * Class VoitureElectrique
@@ -27,11 +28,13 @@ class VoitureElectrique extends Voiture
     /**
      * Surcharge : il perd de l'énergie en roulant
      * @param int $kilometres
+     * @throws \Exception
      */
     public function rouler(int $kilometres): void
     {
-        // On augmente les kilomètres
-        $this->km = $this->km + $kilometres;
+        // On rappelle la méthode parent
+        parent::rouler($kilometres);
+
         // On perd de l'énergie
         $this->setEnergie($this->energie - $kilometres);
 
@@ -70,9 +73,13 @@ class VoitureElectrique extends Voiture
     /**
      * Permet d'ajouter de l'énergie à la voiture
      * @param int $recharge - Par défaut 100 (maximum)
+     * @throws \Exception
      */
     public function recharger(int $recharge = 100): void
     {
+        if ($recharge < 0) {
+            throw new \Exception('On peut recharger la voiture électrique seulement avec une valeur positive');
+        }
         $this->setEnergie($this->energie + $recharge);
     }
 }

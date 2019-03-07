@@ -1,5 +1,7 @@
 <?php
 
+use Classes\Product;
+
 require('autoloader.php');
 
 // On créé une instance de produit

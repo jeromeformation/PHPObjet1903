@@ -1,4 +1,0 @@
-<?php
-
-
-$builder = new FormBuilder();
