@@ -1,5 +1,5 @@
 <?php
-require 'autoloader.php';
+require_once 'autoloader.php';
 
 use Classes\Database\Connection;
 

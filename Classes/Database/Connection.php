@@ -48,14 +48,13 @@ class Connection
         return $pdoStatement->fetchAll();
     }
 
-    public function preparedQuery(): array
+    public function findById(string $tableName, int $id): array
     {
         // Préparation
-        $query = "SELECT * FROM product WHERE id = :id";
+        $query = "SELECT * FROM ".$tableName." WHERE id = :id";
         $statement = $this->pdo->prepare($query);
 
         // Execution
-        $id = 1;
         $statement->bindParam(':id',$id);
         $statement->execute();
 

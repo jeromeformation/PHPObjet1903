@@ -8,16 +8,14 @@ require 'autoloader.php';
 // Instanciation (new) de "Connection"
 $connexion = new Connection();
 // Appel de la méthode "preparedQuery" de Connection
-$product = $connexion->findById('product', 1);
-
+$category = $connexion->findById('category', 2);
 //// HTML
 // header
 require 'header.php';
 // Affichage des propriétés du produit
 ?>
 <main class="container">
-    <h1><?= $product[0]['name'] ?></h1>
-    <p><?= $product[0]['description'] ?></p>
+    <h1><?= $category[0]['name'] ?></h1>
 </main>
 <?php
 // footer

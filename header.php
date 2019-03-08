@@ -1,6 +1,14 @@
 <?php
-// Déclaration des catégories (on exportera par la suite)
-$categories = ['Voyage', 'Bien-être'];
+require_once 'autoloader.php';
+
+use Classes\Database\Connection;
+
+$connection = new Connection();
+
+$categories = $connection->query(
+    'SELECT * FROM category'
+);
+
 
 ?>
 
@@ -31,13 +39,8 @@ $categories = ['Voyage', 'Bien-être'];
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
           <div class="dropdown-menu" aria-labelledby="dropdown07">
-            
-            <?php foreach($categories as $cat) { 
-                echo '<a class="dropdown-item" href="#">'.$cat.'</a>';
-            } ?>
-			<?php // Deuxième syntaxe ?>
             <?php foreach($categories as $cat) : ?>
-                <a class="dropdown-item" href="#"><?= $cat ?></a>
+                <a class="dropdown-item" href="#"><?= $cat['name'] ?></a>
             <?php endforeach; ?>
             
           </div>
