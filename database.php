@@ -9,6 +9,7 @@ $products = $connection->query(
     'SELECT * FROM product'
 );
 
+
 // HTML
 include 'header.php'; ?>
 
